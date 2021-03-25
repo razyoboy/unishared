@@ -1,6 +1,6 @@
 import numpy as np
 import decimal
-
+#fuckyou
 def func(x):
     return np.exp(-x/4)*(2-x)-1
 
