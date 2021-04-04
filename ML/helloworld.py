@@ -17,3 +17,5 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=5)
 model.evaluate(x_test, y_test)
+
+#In truth I have no idea how this works.
