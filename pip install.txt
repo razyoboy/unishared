@@ -1,3 +1,0 @@
-pip install -U wxPython
-pip install eyeD3
-pip install python-magic-bin
