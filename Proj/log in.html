@@ -6,7 +6,8 @@
         }
         .center {
             text-align: center;
-            color:darkslategray
+            color:darkslategray;
+            margin: auto;
         }
         .container {
             padding: 15px;
@@ -17,10 +18,12 @@
             overflow: auto;
             width: 50%;
             height: 100%;
+            margin: auto;
+            padding: 10px;
         }
         .coconut-goat {
-            background-color: aliceblue;
-            margin: 5% auto 15% auto;
+            background-color: rgb(240, 248, 255);
+            margin: auto;
             border: 2px solid rgb(112, 1, 238);
             width: 70%;
         }
@@ -31,8 +34,8 @@
         button {
         background-color: #366aca;
         color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
+        padding: 10px 10px;
+        margin: 10px 0;
         border: none;
         cursor: pointer;
         width: 100%;
@@ -57,28 +60,31 @@
 </head>
     <div class="center">
         <h0 style="font-family:Haettenschweiler;font-size:100px;">STARK PHARMACEUTICAL LOG IN FORM</h0>
-        <p style="font-size:30px;">Please log in before proceeding....</p>
+        <p style="font-family: Arial, Helvetica, sans-serif;font-size:30px;">Please log in before proceeding....</p>
         <button onclick="document.getElementById('Ganyu').style.display='block'" style="width:auto;">Click here to login</button>     
     </div>
     <div id='Ganyu' class="coconut">
-        <form class="coconut-goat animate" action="spooky.html" method ="POST">
-            <div class = 'container'>
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51wj2gwAJ2L._AC_SL1000_.jpg" alt="stark" width="100%">
-                <br>
-                <label for = "usrn"><b>Username</b></label>
-                <br>
-                <input type='text' placeholder='Your Company Username' name='usrn' required>
-                <br>
-                <label for = "pwd"><b>Password</b></label>
-                <br>
-                <input type='password' placeholder='Your password' name='pwd' required>
-                <br>
-                <button type='submit' style="width:30%;">Login</button>
-                <br>
-                <button type="button" onclick="document.getElementById('Ganyu').style.display='none'" class="cancelbtn" style="width:30%">Cancel</button>
-            </div>
-           
-        </form>
+        <div class='center'>
+            <form class="coconut-goat animate" action="spooky.html" method ="POST">
+                <div class = 'container'>
+                    <div>
+                        <img src="img/banner.png" alt="banner" width="100%">
+                        <br>
+                        <label for = "usrn"><b>Username</b></label>
+                        <br>
+                        <input type='text' placeholder='Your username' name='usrn' required>
+                        <br>
+                        <label for = "pwd"><b>Password</b></label>
+                        <br>
+                        <input type='password' placeholder='Your password' name='pwd' required>
+                        <br>
+                        <button type='submit' style="width:30%;">Login</button>
+                        <br>
+                        <button type="button" onclick="document.getElementById('Ganyu').style.display='none'" class="cancelbtn" style="width:30%">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/qp2dwvLVvVU" title="YouTube video player" frameborder="0" 
