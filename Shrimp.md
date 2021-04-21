@@ -1,14 +1,25 @@
-<b>TYPES OF PROGRAMS</b>
-<ul>ROCKY -> For simulation of bulk object, either solid or liquid (Particle Simulation)</ul>
-<ul>MarkForged -> 3D Printer Line Ups</ul>
+ANSYS - TRUE SIMULATION PLATFORM 
+======
+So they say.
+* ANSYS Fluent -> For CFD (Computational Fluid Dynamics) Simulation
+* Where ANSYS Student is absolutely free.
 
-<h1>ANSYS - TRUE SIMULATION PLATFORM</h1> so they say.
-<ul>ANSYS Fluent -> For CFD (Computational Fluid Dynamics) Simulation</ul>
-<ul>Where ANSYS Student is absolutely free.</ul>
-<p>ANSYS itself has many applications, those being;<p>
-<ul>Aerospace / Defense</ul>
-<ul>High Tech Electronics</ul>
-<ul>Healthcare and Biomedical Industries</ul>
-<br><p> We shall focus on the Healthcare part<p>
-<ul>80% of the top 50 healthcare companies used ANSYS, Johnson-Johnson, Moderna. (fuck China and your Sinovac bullshit)</ul>
+**TYPES OF PROGRAMS**
+----
 
+* ROCKY -> For simulation of bulk object, either solid or liquid (Particle Simulation)
+* MarkForged -> 3D Printer Line Ups
+
+**ANSYS itself has many applications, those being;**
+---
+* Aerospace / Defense
+* High Tech Electronics
+* Healthcare and Biomedical Industries
+
+We shall focus on the Healthcare part
+* 80% of the top 50 healthcare companies used ANSYS, Johnson-Johnson, Moderna. (fuck China and your Sinovac bullshit)
+
+By which these healthcare companies would simulate the Simulation Flight for the on-going COVID-19, which includes;
+* Fitting the Facial Mask Properly
+* General Flight Path of Airborne COVID-19 specimen
+* Static Air Simulation of COVID-19 particles when sneezing
