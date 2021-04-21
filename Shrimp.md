@@ -1,6 +1,15 @@
 ANSYS - TRUE SIMULATION PLATFORM 
 ======
 So they say.
+
+**NEEDS REPORT SEND IT TO JARN KUNG EMAIL (1-WEEK)**
+* Show your results after simulation
+* Explain your steps and stuffs
+* No need for full formal cover, just throw in your name and your results and conclusion
+    * Only one or two pages are fine 
+
+Now lets continue,
+
 * ANSYS Fluent -> For CFD (Computational Fluid Dynamics) Simulation
 * Where ANSYS Student is absolutely free.
 
@@ -48,3 +57,4 @@ CDF Workflow using ANSYS Fluent
     * Compute Solution
 * **Post Processing**
     * Examine Results
+
