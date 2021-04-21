@@ -7,6 +7,8 @@ So they say.
 * Explain your steps and stuffs
 * No need for full formal cover, just throw in your name and your results and conclusion
     * Only one or two pages are fine 
+* **_Screenshot is often more than enough_** and just a few explaination are extremely fine.
+* Filename should be the student number 6213xxx
 
 Now lets continue,
 
