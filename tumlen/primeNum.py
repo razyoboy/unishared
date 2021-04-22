@@ -1,6 +1,6 @@
 import numpy as np
 set = [2,4,6,7,8,5]
-#a = int(input(">> "))
+a = int(input(">> "))
 def cal(a):
     if  a>1 :
         for i in range(2, a):
