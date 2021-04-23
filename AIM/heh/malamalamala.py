@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-folder = 'F:/whateverthisis/Basic-Image-Processing/images/malaria/'
+folder = 'C:\\Users\\Windows 10\\Kim\python\\New folder\\malaria\\'
 files = os.listdir(folder)
 
 total = len(files)
