@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 x = np.array([])
 y = np.array([])
 
-print("Please input your x-values (x-axis) [Minimum of Two] \n When done please type any character")
+print("Please input your x-values (x-axis) [Minimum of Three] \n When done please type any character")
 
 while True:
     xint = input('> ')
@@ -14,7 +14,7 @@ while True:
     except:
         break
 
-print("Please inout your f(x)-values (y-axis) [NO MORE than Two]\n When done please type any character")
+print("Please inout your f(x)-values (y-axis) [NO MORE than Three]\n When done please type any character")
 
 while True:
     yint = input("> ")
@@ -25,17 +25,19 @@ while True:
         break
 
 def LGR(x,y):
-    n = len(x) - 2
+    n = len(x) - 3
     j = 0
     for i in range(n):
-        l0 = (x[1+j]-x[2+j])/(x[1+j]-x[0+j])
-        l1 = (x[0+j]-x[2+j])/(x[0+j]-x[1+j])
-        inty= (l0*y[0+j])+(l1*y[1+j]) 
+        l0 = ((x[2+j]-x[3+j])*(x[1+j]-x[3+j]))/((x[2+j]-x[0+j])*(x[1+j]-x[0+j]))
+        l1 = ((x[2+j]-x[3+j])*(x[0+j]-x[3+j]))/((x[2+j]-x[1+j])*(x[0+j]-x[1+j]))
+        l2 = ((x[1+j]-x[3+j])*(x[0+j]-x[3+j]))/((x[1+j]-x[2+j])*(x[0+j]-x[2+j]))
+        inty = (l0*y[0+j])+(l1*y[1+j])+(l2*y[2+j])
         j += 1
         y = np.append(y, float(inty))
     return y
 
-ymod = LGR(x,y)
+ymod = LGR(x,y); print(ymod)
+
 print(f"Interpolated values are (x,y);")
 w = len(ymod)
 p = 0
@@ -53,5 +55,5 @@ for xs,ys in zip(x,ymod):
     label = f"({xout},{yout})"
     plt.annotate(label, (xs,ys))
 
-plt.title('Linear LGR Interpolation Results')
+plt.title('Quadratic LGR Interpolation Results')
 plt.show()
