@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 x = np.array([])
 y = np.array([])
 
-print("Please input your x-values (x-axis) [Minimum of Two] \n When done please type 'a'")
+print("Please input your x-values (x-axis) [Minimum of Three] \n When done please type 'a'")
 
 while True:
     xint = input('> ')
@@ -14,7 +14,7 @@ while True:
     except:
         break
 
-print("Please inout your f(x)-values (y-axis) [NO MORE than Two]\n When done please type 'a'")
+print("Please inout your f(x)-values (y-axis) [NO MORE than Three]\n When done please type 'a'")
 
 while True:
     yint = input("> ")
@@ -25,13 +25,17 @@ while True:
         break
 
 def NDD(x,y):
-    n = len(x) - 2
+    n = len(x) - 3
     j = 0
-    for i in range (n):
-        c0 = y[0+j]
-        c1 = (y[1+j] - y[0+j]) / (x[1+j] - x[0+j])
-        diff = x[2+j] - x[0+j]
-        inty = c0 + (c1*diff)
+    for i in range(n):
+        c0 = y[0+j]; print(c0)
+        c1 = (y[1+j] - y[0+j]) / (x[1+j] - x[0+j]); print(c1)
+        c2 = ((((y[2+j] - y[1+j])/(x[2] - x[1])) - ((y[1+j] - y[0+j]) / (x[1+j]-x[0+j])))) / (x[2] - x[0])
+        print(c2)
+        diffc1 = (x[3+j] - x[0+j])
+        print(diffc1)
+        diffc2 = ((x[3+j] - x[0+j])*(x[3+j] - x[1+j])); print(diffc2)
+        inty = c0 + (c1*diffc1) + (c2*diffc2)
         j += 1
         y = np.append(y, float(inty))
     return y
@@ -55,5 +59,5 @@ for xs,ys in zip(x,ymod):
     label = f"({xout},{yout})"
     plt.annotate(label, (xs,ys))
 
-plt.title('Linear NDD Interpolation Results')
+plt.title('Quadratic NDD Interpolation Results')
 plt.show()
