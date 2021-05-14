@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 x = np.array([])
 y = np.array([])
 
-print("Please input your x-values (x-axis) [Minimum of Two] \n When done please type 'a'")
+print("Please input your x-values (x-axis) [Minimum of Two] \n When done please type any character")
 
 while True:
     xint = input('> ')
@@ -14,7 +14,7 @@ while True:
     except:
         break
 
-print("Please inout your f(x)-values (y-axis) [NO MORE than Two]\n When done please type 'a'")
+print("Please inout your f(x)-values (y-axis) [NO MORE than Two]\n When done please type any character")
 
 while True:
     yint = input("> ")
@@ -27,7 +27,7 @@ while True:
 def NDD(x,y):
     n = len(x) - 2
     j = 0
-    for i in range (n):
+    for i in range(n):
         c0 = y[0+j]
         c1 = (y[1+j] - y[0+j]) / (x[1+j] - x[0+j])
         diff = x[2+j] - x[0+j]

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 x = np.array([])
 y = np.array([])
 
-print("Please input your x-values (x-axis) [Minimum of Three] \n When done please type 'a'")
+print("Please input your x-values (x-axis) [Minimum of Three] \n When done please type any character")
 
 while True:
     xint = input('> ')
@@ -14,7 +14,7 @@ while True:
     except:
         break
 
-print("Please inout your f(x)-values (y-axis) [NO MORE than Three]\n When done please type 'a'")
+print("Please inout your f(x)-values (y-axis) [NO MORE than Three]\n When done please type any character")
 
 while True:
     yint = input("> ")
