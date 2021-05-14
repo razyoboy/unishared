@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.array([2,3,4,5,3.2])
+x = np.array([2,3,4,5,3.2])# Last one is what we wanna find (can add more but not less)
 y = np.array([0.2239,-0.2601,-0.3971,-0.51245])
 
 def LGRThree(x,y):

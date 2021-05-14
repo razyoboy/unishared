@@ -51,7 +51,6 @@ for k in range(w):
     p += 1
 
 plt.scatter(x,ymod)
-plt.plot(x,ymod)
 plt.xlabel('x')
 plt.ylabel('f(x)')
 
