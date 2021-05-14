@@ -28,8 +28,8 @@ def NDD(x,y):
     n = len(x) - 3
     j = 0
     for i in range(n):
-        c0 = y[0+j]; print(c0)
-        c1 = (y[1+j] - y[0+j]) / (x[1+j] - x[0+j]); print(c1)
+        c0 = y[0+j]
+        c1 = (y[1+j] - y[0+j]) / (x[1+j] - x[0+j])
         c2 = ((((y[2+j] - y[1+j])/(x[2] - x[1])) - ((y[1+j] - y[0+j]) / (x[1+j]-x[0+j])))) / (x[2] - x[0])
         print(c2)
         diffc1 = (x[3+j] - x[0+j])
