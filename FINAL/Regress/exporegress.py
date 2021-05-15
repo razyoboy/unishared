@@ -4,6 +4,31 @@ import matplotlib.pyplot as plt
 xbar = np.array([1,2,3,4,5])
 ybar = np.array([0.1,0.7,0.9,1.7,2.1])
 
+'''
+xbar = np.array([])
+ybar = np.array([])
+
+print("Please input your x-values\nWhen done please type any character")
+
+while True:
+    xint = input('> ')
+    try: 
+        (isinstance(float(xint), float) == True) or (isinstance(float(xint), int) == True)
+        x = np.append(x, float(xint)) 
+    except:
+        break
+
+print("Please input your y-values\nWhen done please type any character")
+
+while True:
+    yint = input("> ")
+    try:
+        (isinstance(float(yint), float) == True) or (isinstance(float(yint), int) == True)
+        y = np.append(y, float(yint))
+    except:
+        break
+'''
+
 n = len(xbar)
 x = xbar; sumx = np.sum(x)
 y = np.log(ybar); sumy = np.sum(y)
