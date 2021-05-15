@@ -33,8 +33,8 @@ xy = x*y
 sumxy = sum(xy)
 
 a = np.array([[n, sumx], [sumx, sumxsq]])
-b = np.array([[sumy],[sumxy]])
-res = np.linalg.solve(a,b)
+bx = np.array([[sumy],[sumxy]])
+res = np.linalg.solve(a,bx)
 a0 = res[0]; a1 = res[1]
 r = np.arange(-30,30,0.01)
 eqn = a0 + (a1*r)
