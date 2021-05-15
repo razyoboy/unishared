@@ -1,0 +1,32 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+xbar = np.array([1,2,3,4,5])
+ybar = np.array([0.1,0.7,0.9,1.7,2.1])
+
+n = len(xbar)
+x = xbar; sumx = np.sum(x)
+y = np.log(ybar); sumy = np.sum(y)
+xsq = np.square(x); sumxsq = np.sum(xsq)
+xy = x*y; sumxy = np.sum(xy)
+
+a = np.array([[n, sumx], [sumx, sumxsq]])
+b = np.array([[sumy],[sumxy]])
+res = np.linalg.solve(a,b)
+rawa0 = res[0]; a1 = res[1]
+a0 = np.exp(rawa0); b = a1
+r = np.arange(-3,6,0.01)
+eqn = a0*(np.exp(b*r))
+
+print(f"Calculated a is {a0} and b of {b}")
+print(f"-> f(x) = {a0}e^{a1}x")
+
+plt.plot(r,eqn)
+plt.scatter(xbar,ybar, color='g')
+plt.legend(['Regressed f(x)','Data Points'])
+plt.title('Exponentially Regressed Fitted Curve')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+
+#github.com/razyoboy/unishared
