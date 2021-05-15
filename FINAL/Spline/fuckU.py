@@ -20,19 +20,18 @@ while True:
     except:
         break
 
-print(x)
+print("the interest value", x)
 #j = float(input("the value we want to find >> "))
 for i in range(0, len(x)):
     for j in range(0, len(sorted)):
         if x[i] < sorted[j]:
-            
+            """
             print("hi >> ",sorted[j])
             print("hello >> ",sorted[j-1])
-            
+            """
             slope = (y[j]-y[j-1])/(sorted[j]-sorted[j-1])
             f = slope*(x[i]-sorted[j-1]) + y[j-1]
             print("the ans is ", f)
-
             break
 
 
