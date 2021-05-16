@@ -2,7 +2,7 @@ import numpy as np
 import scipy.integrate as wendy
 
 def f(x):
-    return ((2*x**3)-(5*x**2)+(3*x)+2)
+    return ((2*x**3)-(5*x**2)+(3*x)+1)
 
 print("Enter your lower bond")
 a = float(input("> "))
