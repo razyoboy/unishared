@@ -1,8 +1,13 @@
 import numpy as np
+import scipy.integrate as wendy
 
-a = np.array([[1,2,3],[4,3,6]])
-print(a)
+def f(x):
+    return x**2+x
 
-b = a[0,1]; print(b)
+a = -1
+b = 1
+I = wendy.quad(f,a,b); print(I)
 
-c = a[0,2] - a[1,1]; print(c)
+first = f(-1/np.sqrt(3))
+sec = f(1/np.sqrt(3))
+res = first + sec; print(res)
