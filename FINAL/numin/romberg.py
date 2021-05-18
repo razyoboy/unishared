@@ -24,7 +24,6 @@ def comptrap(f,a,h,n):
     Icomp = ((h/2)*((x0+xn) + 2*float(sumcal)))
     return Icomp
 
-
 a = 0
 b = 1
 n = 1
