@@ -26,7 +26,7 @@
 }
 
 .navbar-light .navbar-brand {
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bold;
@@ -34,15 +34,15 @@
 }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-toggler {
-  background: #fff;
+  background: rgb(0, 0, 0);
 }
 
 .navbar-nav {
@@ -54,7 +54,7 @@
 }
 
 .nav-link.active,.nav-link:focus{
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-toggler {
@@ -64,21 +64,5 @@
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: #fff;
-}
-
-.link-area
-{
-  position:fixed;
-  bottom:20px;
-  left:20px;  
-  padding:15px;
-  border-radius:40px;
-  background:tomato;
-}
-.link-area a
-{
-  text-decoration:none;
-  color:#fff;
-  font-size:25px;
+  color: rgb(0, 0, 0);
 }
