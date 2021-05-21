@@ -1,6 +1,6 @@
 import numpy as np
 
-a = int(input("size of matrix >> "))
+a = int(input("size of matrix >> ")) #the size that we get is a*a (square matrix)
 mat = np.ones([int(a), int(a)])
 newmat = np.ones([int(a), int(a)])
 res = np.ones([int(a),1])
