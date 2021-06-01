@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset = "utf-8">
+    </head>
     <style>
         .center {
             margin: auto;
@@ -43,7 +46,37 @@
                 document.getElementById('eula').innerHTML = hentai;
                 makingitgobrrrrr();
             }
+            function QSolve(){
+                //  Now we can have fun
+                var inA = document.getElementById("a-term").value;
+                var inB = document.getElementById("b-term").value;
+                var inC = document.getElementById("c-term").value;
+
+                if (inA == 0){
+                    var x = (-inC / inB);
+                    document.getElementById("out").innerHTML = "Calculated root is x = " + x;
+                }
+                else {
+                    var s = (inB**2) - 4*(inA*inC);
+                    if (s == 0){
+                        var x = -inB/(2*inA);
+                        document.getElementById("out").innerHTML = "Calculated root is x = " + x;
+                    }
+                    else if (s > 0) {
+                        var x1 = (-inB -(s)**0.5)/(2*inA);
+                        var x2 = (-inB +(s)**0.5)/(2*inA);
+                        document.getElementById("out").innerHTML = "Calculated root is x1 = " + x1 + " and x2 of " + x2;
+                    } else {
+                        var x = -inB/(2*inA);
+                        var y = ((-s)**0.5)/(2*inA);
+                        document.getElementById("out").innerHTML = "Calculated root is (complex): " + x + " ± " + y + "i";
+                    }
+            }
+            
+        }
         </script>
+
+
         <body onload = timeowo();>
             <span id = 'eula'></span>
             <p></p>
@@ -54,6 +87,25 @@
                     please kindly get off and report yourself to the sysadmin
                 </p>
             </div>
+            <div class = 'center'>
+                <br>
+                <h2> Quadratic Solver (Beta)</h2>
+                <p>Enter your equation in the form of: ax^2 + bx + c</p>
+                <label for="aterm">Input your a-term:</label><br>
+                <input type="number" id="a-term"><br>
+                <label for="bterm">Input your b-term:</label><br>
+                <input type="number" id="b-term"><br>
+                <label for="cterm">Input your c-term</label><br>
+                <input type="number" id="c-term"><br>
+                <br>
+                <button type="button" onclick="QSolve();">Solve</button>
+                <p id ="out"></p>
+            </div>
         </body>
     </body>
+
+
+    <script>
+
+    </script>
 </html>
