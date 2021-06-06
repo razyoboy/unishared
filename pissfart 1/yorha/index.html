@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Final Exam: Problem 2</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class ="ft">
+  <br>
+  <div class ="cent smol">
+    <h1>Interactive Loan Calculator</h1>
+    <p><em>made with lovingly care by Supat Y. 6213468 EGBI</em></p> 
+  </div>
+  <br>
+  <div>
+    <p class ='textbox'>Nowadays, credits card debt are ruining lifes - due to its ease of use and lack of experience,
+      which may lead to severe consequences, many household has fallen into debts countless time - and thats because they did
+      not know how to manage their loan payments, and how to calculate them sometimes. 
+    </p>
+    <p class ='textbox'>This simple page would allow users to calculate their loan payments, so that perhaps it can reduce this unfortunate
+      circumstances to happen to you.
+    </p>
+  </div>
+  <br>
+  <div class = 'centerwarning warning'>
+    <h2 class = "stripes"></h2>
+    <p class="notsosmol"><b>DISCLAIMER: Read First</b></p>
+    <p class="notsosmol justify">Please note that this is merely a calculator that is based on the
+      loan formula, this tool by no means provides guarantee that you will not be in debt by using this tool. 
+      Please refer to your local region banking rules and regulations regarding loan payment before using this tool.
+    </p>
+    
+  </div>
+
+  <div class ="cent">
+    <br>
+    <h2>Loan Calculator (Beta)</h2>
+    <p>Please take note of each variables, which is explained down below:</p>
+    <form class = "justify">
+      <ul><b><em>P</em></b> stands for the principal (the borrowed amount)</ul>
+      <ul><b><em>r</em></b> is the interest rate in percentage (%)</ul>
+      <ul><b><em>n</em></b> is the number of years to be paid</ul> 
+    </form>
+    <p>Please fill in down below.</p>
+    <form id="options" onsubmit="choiceCheck()">
+      <label for="principal">Input your <b><em>P</em></b></label><br>
+      <input type="number" id="principal" required><br>
+      <label for = "interest">Input your <b><em>r</em></b></label><br>
+      <input type="number" id="interest" required><br>
+      <label for = "years">Input your <b><em>n</em></b></label><br>
+      <input type="number" id="years" required><br>
+      <br>
+      <input type="radio" id="Monthly" name="Choice" value="Monthly" required>
+      <label>Monthly</label>
+      <input type="radio" id="Annually" name="Choice" value="Annually" required>
+      <label>Annually</label>
+      <br><br>
+      <input type="submit" value="Solve"></button>
+    </form>
+    <br>
+  </div>
+  <div class = "cent warning">
+    <p id = "out"></p>
+    <p id = "out2"></p>
+    <p id = "out3"></p>
+    <br><br>
+  </div>
+
+</body>
+
+<script>
+  function choiceCheck(){
+    var radioIn = document.getElementsByName("Choice");
+    for (var radio of radioIn)
+    {
+      if (radio.checked && radio.value === "Monthly") {
+        ApSolveMonth();
+      }
+      else if (radio.checked && radio.value === "Annually") {
+        ApSolveYear();
+      }
+    }
+  }
+
+  function ApSolveMonth(){
+    var P = document.getElementById("principal").value;
+    var r = document.getElementById("interest").value;
+    var n = document.getElementById("years").value;
+
+    var Pf = parseFloat(P);
+    var rf = parseFloat(r/100);
+    var nf = parseFloat(n);
+
+    var Upper = (rf*Pf);
+    var LowerIn = (1 + rf);
+    var LowerSq = LowerIn ** (-nf);
+    var Lower = 1 - LowerSq;
+    var Ap = Upper / Lower;
+    var ApRounded = Math.round(Ap * 100/12) / 100;
+    var ApYear = Math.round(Ap * 100 * n) / 100;
+
+    document.getElementById("out2").innerHTML = 
+    "Your Calculated Payment (Per Month) is " + ApRounded + " THB";
+    document.getElementById("out3").innerHTML =
+    "Your total payment is " + ApYear + " THB";
+  }
+
+  function ApSolveYear(){
+    var P = document.getElementById("principal").value;
+    var r = document.getElementById("interest").value;
+    var n = document.getElementById("years").value;
+
+    var Pf = parseFloat(P);
+    var rf = parseFloat(r/100);
+    var nf = parseFloat(n);
+
+    var Upper = (rf*Pf);
+    var LowerIn = (1 + rf);
+    var LowerSq = LowerIn ** (-nf);
+    var Lower = 1 - LowerSq;
+    var Ap = Upper / Lower;
+    var ApRounded = Math.round(Ap * 100) / 100;
+    var ApYear = Math.round(Ap * 100 * n) / 100;
+
+    document.getElementById("out2").innerHTML = 
+    "Your Calculated Payment (Per Year) is " + ApRounded + " THB";
+    document.getElementById("out3").innerHTML =
+    "Your total payment is " + ApYear + " THB";
+  }
+</script>
+</html>

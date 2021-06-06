@@ -1,0 +1,51 @@
+.ft {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cent {
+  text-align: center;
+  margin: auto;
+  width: 50%
+}
+.box {
+  background: white;
+  border: 1px solid gray;
+  margin: auto;
+  width: 50%;
+}
+.textbox {
+  text-align: justify;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.warning {
+  background: white;
+  border: 1px solid gray;
+  margin: auto;
+}
+.centerwarning {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.warning > h2 {
+padding: 1rem;
+margin: 0 0 0.5rem 0;
+}
+.warning > p {
+padding: 0 1rem;
+}
+.stripes {
+  color: white;
+  background: repeating-linear-gradient(45deg, #be1313, #be1313 10px, #ffff 10px, #fff 20px);
+}
+.smol {
+  line-height: 0.1;
+}
+.notsosmol{
+  line-height: 1.2;
+}
+.justify{
+  text-align: justify;
+}
