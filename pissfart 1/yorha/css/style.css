@@ -1,6 +1,9 @@
 .ft {
   font-family: Arial, Helvetica, sans-serif;
 }
+.aligncent {
+  align-content: center;
+}
 .cent {
   text-align: center;
   margin: auto;
@@ -41,11 +44,17 @@ padding: 0 1rem;
   background: repeating-linear-gradient(45deg, #be1313, #be1313 10px, #ffff 10px, #fff 20px);
 }
 .smol {
-  line-height: 0.1;
+  line-height: 1;
 }
 .notsosmol{
   line-height: 1.2;
 }
 .justify{
   text-align: justify;
+}
+.smolfont{
+  font-size: smaller;
+}
+.rightbox{
+  float: right;
 }

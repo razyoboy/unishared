@@ -2,16 +2,20 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
   <title>Final Exam: Problem 2</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class ="ft">
-  <br>
+<body onload = time(); class ="ft">
+  <button type="button" class = "rightbox" onclick = contactme();>Contact me :3</button><br>
   <div class ="cent smol">
     <h1>Interactive Loan Calculator</h1>
     <p><em>made with lovingly care by Supat Y. 6213468 EGBI</em></p> 
   </div>
+  <hr>
+  <!-- Clock goes here -->
+  <p id = "TimeandDate" class = "cent"></p>
+  <hr>
   <br>
   <div>
     <p class ='textbox'>Nowadays, credits card debt are ruining lifes - due to its ease of use and lack of experience,
@@ -21,6 +25,10 @@
     <p class ='textbox'>This simple page would allow users to calculate their loan payments, so that perhaps it can reduce this unfortunate
       circumstances to happen to you.
     </p>
+    <hr>
+  </div>
+  <div id ="contact" class = "cent" style="display: none;">
+    <p>Hello World</p>
   </div>
   <br>
   <div class = 'centerwarning warning'>
@@ -38,12 +46,15 @@
     <h2>Loan Calculator (Beta)</h2>
     <p>Please take note of each variables, which is explained down below:</p>
     <form class = "justify">
-      <ul><b><em>P</em></b> stands for the principal (the borrowed amount)</ul>
-      <ul><b><em>r</em></b> is the interest rate in percentage (%)</ul>
-      <ul><b><em>n</em></b> is the number of years to be paid</ul> 
+      <ul>
+        <li><b><em>P</em></b> stands for the principal (the borrowed amount)</li>
+        <li><b><em>r</em></b> is the interest rate in percentage (%)</li>
+        <li><b><em>n</em></b> is the number of years to be paid</li>
+      </ul>
+ 
     </form>
-    <p>Please fill in down below.</p>
-    <form id="options" onsubmit="choiceCheck()">
+    <form>
+      <p>Please fill in down below.</p>
       <label for="principal">Input your <b><em>P</em></b></label><br>
       <input type="number" id="principal" required><br>
       <label for = "interest">Input your <b><em>r</em></b></label><br>
@@ -56,33 +67,33 @@
       <input type="radio" id="Annually" name="Choice" value="Annually" required>
       <label>Annually</label>
       <br><br>
-      <input type="submit" value="Solve"></button>
+      <button type="button" onclick = "choiceCheck();">Solve</button>
+      <button type="button" onclick = "window.location.reload();">Refresh</button>
+      <br>
     </form>
-    <br>
+
   </div>
-  <div class = "cent warning">
-    <p id = "out"></p>
+  <div class = "cent">
     <p id = "out2"></p>
     <p id = "out3"></p>
     <br><br>
   </div>
-
+  <hr>
+  <p class = "smolfont"><em>Made by Supat Yutibun 6213468 EGBI, this website is for the EGBI121 Final Exam only.</em></p>
 </body>
 
 <script>
   function choiceCheck(){
     var radioIn = document.getElementsByName("Choice");
-    for (var radio of radioIn)
-    {
-      if (radio.checked && radio.value === "Monthly") {
-        ApSolveMonth();
-      }
+      for (var radio of radioIn){
+        if (radio.checked && radio.value === "Monthly") {
+          ApSolveMonth();
+        }
       else if (radio.checked && radio.value === "Annually") {
-        ApSolveYear();
+          ApSolveYear();
+        }
       }
     }
-  }
-
   function ApSolveMonth(){
     var P = document.getElementById("principal").value;
     var r = document.getElementById("interest").value;
@@ -100,10 +111,18 @@
     var ApRounded = Math.round(Ap * 100/12) / 100;
     var ApYear = Math.round(Ap * 100 * n) / 100;
 
-    document.getElementById("out2").innerHTML = 
-    "Your Calculated Payment (Per Month) is " + ApRounded + " THB";
-    document.getElementById("out3").innerHTML =
-    "Your total payment is " + ApYear + " THB";
+    if (isNaN(Ap)) {
+      document.getElementById("out2").innerHTML = 
+      "Invalid input, please check again."
+      document.getElementById("out3").innerHTML = ""
+    }
+    else {
+      document.getElementById("out2").innerHTML = 
+      "Your Calculated Payment (Per Month) is " + ApRounded + " THB";
+      document.getElementById("out3").innerHTML =
+      "Your total payment is " + ApYear + " THB";
+    }
+
   }
 
   function ApSolveYear(){
@@ -123,10 +142,34 @@
     var ApRounded = Math.round(Ap * 100) / 100;
     var ApYear = Math.round(Ap * 100 * n) / 100;
 
-    document.getElementById("out2").innerHTML = 
-    "Your Calculated Payment (Per Year) is " + ApRounded + " THB";
-    document.getElementById("out3").innerHTML =
-    "Your total payment is " + ApYear + " THB";
+    if (isNaN(Ap)) {
+      document.getElementById("out2").innerHTML = 
+      "Invalid input, please check again."
+      document.getElementById("out3").innerHTML = ""
+    }
+    else {
+      document.getElementById("out2").innerHTML = 
+      "Your Calculated Payment (Per Year) is " + ApRounded + " THB";
+      document.getElementById("out3").innerHTML =
+      "Your total payment is " + ApYear + " THB";
+    }
+  }
+  function refreshtime(){
+    var refresh = 1000;
+    timer = setTimeout('time()', refresh)
+  }
+  function time(){
+    var gettime = new Date()
+    document.getElementById('TimeandDate').innerHTML = gettime;
+    refreshtime();
+  }
+  function contactme(){
+    var click = document.getElementById("contact");
+    if (click.style.display === "none") {
+      click.style.display = "block";
+    } else{
+      click.style.display = "none";
+    }
   }
 </script>
 </html>
