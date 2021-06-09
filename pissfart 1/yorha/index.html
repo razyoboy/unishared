@@ -43,7 +43,6 @@
       <ul><b><em>n</em></b> is the number of years to be paid</ul> 
     </form>
     <p>Please fill in down below.</p>
-    <form id="options" onsubmit="choiceCheck()">
       <label for="principal">Input your <b><em>P</em></b></label><br>
       <input type="number" id="principal" required><br>
       <label for = "interest">Input your <b><em>r</em></b></label><br>
@@ -51,12 +50,13 @@
       <label for = "years">Input your <b><em>n</em></b></label><br>
       <input type="number" id="years" required><br>
       <br>
-      <input type="radio" id="Monthly" name="Choice" value="Monthly" required>
+      <input type="radio" id="Choice"  value="Monthly" >
       <label>Monthly</label>
-      <input type="radio" id="Annually" name="Choice" value="Annually" required>
+      <input type="radio" id="Choice"  value="Annually" >
       <label>Annually</label>
       <br><br>
-      <input type="submit" value="Solve"></button>
+      <button onclick = "choiceCheck()">Calculate</button>
+      <br>
     </form>
     <br>
   </div>
@@ -71,22 +71,21 @@
 
 <script>
   function choiceCheck(){
-    var radioIn = document.getElementsByName("Choice");
-    for (var radio of radioIn)
-    {
-      if (radio.checked && radio.value === "Monthly") {
+    var Choice;
+    var radioIn = document.getElementById("Choice");
+      if (Choice == "Monthly") {
         ApSolveMonth();
       }
-      else if (radio.checked && radio.value === "Annually") {
+      else if (Choice == "Annually") {
         ApSolveYear();
       }
     }
-  }
+  
 
   function ApSolveMonth(){
-    var P = document.getElementById("principal").value;
-    var r = document.getElementById("interest").value;
-    var n = document.getElementById("years").value;
+    var P = document.forms["options"]["principal"].value;
+    var r = document.forms["options"]["interest"].value;
+    var n = document.forms["options"]["years"].value;
 
     var Pf = parseFloat(P);
     var rf = parseFloat(r/100);
