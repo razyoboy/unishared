@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.stats import norm
+import scipy.stats as hentai
 
 class Jean:
     def __init__(self, width, length):
@@ -19,23 +19,29 @@ class Mona:
         self.sd = sd
         self.mu = mu
     
-    def normdist(self, mean, std):
+    def normdist(tiger):
         x = np.arange(-2,2,0.01)
-        y = norm.pdf(x, mean.mu, std.sd)      
+        y = hentai.norm.pdf(x, tiger.mu, tiger.sd)      
         return y
 
+    def betadist(tiger):
+        y = np.arange(-1,1,0.01)
+        return y
 
-res = Mona(0,1).normdist(0.0,1.0)
-x = np.arange(-2,2,0.01)
-plt.plot(x, res)
-plt.show()
+print("Hi")
+choice = input("> ")
 
-"""
-class Tiger:
-    def __init__(self, inhere):
-        self.inhere = inhere
-    def whateverthisis(hentai):
-        return hentai.inhere
+try:
+    if choice == 1:
+        res = Mona(0,1).normdist()
+        x = np.arange(-2,2,0.01)
+        plt.plot(x, res)
+        plt.show()
+    elif choice == 2:
+        res = Mona(0,1).betadist()
+        x = np.arange(-2,2,0.01)
+        plt.plot(x, res)
+        plt.show()
+except:
+    print("kys")
 
-print(Tiger(69).whateverthisis())
-"""
