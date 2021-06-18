@@ -5,6 +5,12 @@ class Gacha():
     count4s = 0
     count5s = 0
 
+    fivestars = ["Albedo","Diluc","Eula","Ganyu","Hu Tao","Jean","Keqing","Klee"
+    ,"Mona","Qiqi","Tartaglia","Venti","Xiao","Zhongli"]
+    fourstars = ["Amber","Beidou","Bennet","Chongyun","Diona","Fishcl","Kaeya"
+    ,"Lisa","Ningguang","Noelle","Razor","Rosaria","Sucrose","Xiangling","Xingqiu","Xinyan"
+    ,"Yanfei"]
+
     def __init__(self, roll):
         self.roll = roll
 
@@ -15,11 +21,13 @@ class Gacha():
 
     def gurantee(self):
         if self.count4s == 10:
-            res = (f"4-Stars (Pity)")
+            char = random.choice(self.fourstars)
+            res = (f"4-Stars (Pity): {char}")
             self.count42 = 0
             return res
         elif self.count5s == 90:
-            res = (f"5-Stars (Pity)")
+            char = random.choice(self.fivestars)
+            res = (f"5-Stars (Pity): {char}")
             self.count5s = 0
             return res
         else: return None
@@ -38,7 +46,8 @@ class Gacha():
                 self.count4s += 1
                 j = self.gurantee()
                 if j is None:
-                    print("5-Stars")
+                    char = random.choice(self.fivestars)
+                    print(f"5-Stars: {char}")
                     self.count5s = 0
                 else: print(j)
 
@@ -47,7 +56,8 @@ class Gacha():
                 self.count4s += 1
                 j = self.gurantee()
                 if j is None:
-                    print("4-Stars")
+                    char = random.choice(self.fourstars)
+                    print(f"4-Stars: {char}")
                     self.count4s = 0
                 else: print(j)
             
@@ -56,12 +66,15 @@ class Gacha():
                 self.count4s += 1
                 j = self.gurantee()
                 if j is None:
-                    print("3-Stars")
+                    print("3-Stars: แตกไปไอสัส")
                 else: print(j)
         return store, self.count5s, self.count4s
 
-
-hey = Gacha(1000).nrolls(); print(hey)
+print("Welcome to this Mock-up Gacha Simulator\nInspired by the one and only:  Genshin Impact")
+print("How much money do you wanna lose today?")
+print("Enter a number of rolls")
+ohho = int(input("> "))
+hey = Gacha(ohho).nrolls()
 
 
 """
