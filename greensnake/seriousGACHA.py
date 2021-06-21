@@ -52,6 +52,7 @@ class gacha():
 for val in gacha(5).rng():
     print(val)
 """
-a = input("Type of character you wanna input>> ")
+b = input("Type of character you wanna input>> ")
+a = b.lower()
 print(gacha.define(a, "Schawarz"))
 
