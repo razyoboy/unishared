@@ -2,3 +2,6 @@
 .vscode
 EGBI121FinalExam
 EGBI121FinalExam/*
+.exe
+*.exe
+*/*.exe
