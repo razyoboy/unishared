@@ -107,4 +107,4 @@ ohho = int(input("> "))
 hey = Gacha(ohho).nrolls()
 
 #   PSA, im never going to probably comment on my code - as long as its not 'explicitly' required.
-#   So fuck you.
+#   So fuck you, Kim.
