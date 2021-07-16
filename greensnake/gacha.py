@@ -107,10 +107,4 @@ ohho = int(input("> "))
 hey = Gacha(ohho).nrolls()
 
 #   PSA, im never going to probably comment on my code - as long as its not 'explicitly' required.
-#   So fuck you.
-
-
-"""
-a = random.randrange(0,100,1); print(a)
-b = random.uniform(0,100); print(b)
-"""
+#   So fuck you, Kim.
